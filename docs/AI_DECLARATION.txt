@@ -1,0 +1,64 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
+
+Name: Md. Shafein Rahman
+Student ID: 24101657
+Assignment: 01
+Date: 26.10.26
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[ ] ChatGPT
+[ ] GitHub Copilot
+[x] Google Gemini
+[ ] Claude
+[ ] Cursor
+[ ] Other: Antigravity
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[ ] Learning/understanding concepts
+[ ] Debugging my code
+[x] Generating code snippets
+[x] Writing text content
+[ ] Design/styling ideas
+[ ] Image generation
+[ ] Other: ________________
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+Briefly describe what you used AI for and how:
+
+Prompt 1: [CSE%20391-%20Assignment%201%20V2.md](file;file:///h%3A/Homepage/CSE%20391-%20Assignment%201%20V2.md) Read this .md file. You are a senior web developer. I want you to create a personal website for me. You can only use HTML and CSS. Focus on page structure, design and styling with CSS. There should be at least 4 sections. Bio, education, contact and Technical skills. The landing page begins at the bio section. For now add place holder texts. The bio section will have a picture of me stored locally. The bio section contains a short paragraph about me and another section about my hobbies which will contain catagorized links. At the bottom of the bio landing page have internal links to other pages and anchor links to my favourite list. It will also feature a top 10 list of my favourite games. The footer of the page will be solid red and will contain a favourite quote of mine. All the content will be contained on large text boxes overlayed on top of an animation of a red grid using css. The overrall stylistic theme will be resident evil, prominently featuring reds and whites. Display the page’s location and last modification date at the bottom using JavaScript. Education section will contain a table with all my educational qualifications. Create a separate CSS file for overall styling. Use hover effects when selecting different sections. The technical skills section will contain external links. 
+
+Prompt 2: remove projects page and put hobbies into the main index page. Make education and tech skills into a seperate page. No need to have an anchor link to my favourite games list and contact at the top of the landing page. Do not put the hobbies link at the top of the navigation bar. Add scanlines effect to the profile picture and make it seperate so that I can change the picture later.
+
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+List specific files/sections where AI helped significantly:
+
+File: index.html Section: favourite games, contact form
+File: qualifications.html Section: educational, skills matrix
+File: style.css Section: overrall style
+
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: shafein
+Date: 26.10.26
+
+============================================================
+Save as: docs/AI_Declaration.txt
+============================================================
