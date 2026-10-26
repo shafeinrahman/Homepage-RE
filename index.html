@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding & Responsive Viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal Resident Evil themed homepage featuring S.T.A.R.S. operative profile, hobbies, and top survival horror games. Built for CSE 391.">
+    <meta name="author" content="Shafein Rahman">
+
+    <title>SHAFEIN RAHMAN // RESIDENT EVIL S.T.A.R.S. ARCHIVE (CSE 391)</title>
+
+    <!-- External Stylesheet (Part 3 Requirement: Separate CSS File) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS (Part 3 Requirement: Internal styles used effectively/sparingly) -->
+    <style>
+        /* Internal CSS specifically targeting highlighted bio-spans & tactical accents */
+        .re-highlight-crimson {
+            color: #d6001c;
+            font-weight: 700;
+            text-shadow: 0 0 6px rgba(214, 0, 28, 0.5);
+        }
+
+        .re-highlight-white {
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+        }
+
+        .hud-bracket {
+            color: #d6001c;
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: 700;
+        }
+
+        .system-ticker {
+            background: rgba(214, 0, 28, 0.08);
+            border-left: 3px solid #d6001c;
+            padding: 8px 14px;
+            margin: 12px 0;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.88rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =======================================================================
+         CSS ANIMATION: RESIDENT EVIL BIOHAZARD & SURVEILLANCE BACKDROP
+         Dark aesthetic with perspective grid, ECG scanlines, and pulse surge
+         ======================================================================= -->
+    <div class="re-viewport" aria-hidden="true">
+        <div class="re-umbrella-grid"></div>
+        <div class="re-ecg-line"></div>
+        <div class="re-spore-drift"></div>
+        <div class="re-scanlines"></div>
+        <div class="re-vignette"></div>
+    </div>
+
+    <!-- =======================================================================
+         HUD HEADER: S.T.A.R.S. & UMBRELLA SURVEILLANCE IDENTITY
+         (Top nav contains NO anchor links to favorite games or contact,
+          and NO hobbies link, exactly as requested)
+         ======================================================================= -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-container">
+                <!-- Umbrella Corp Iconic Rotating Octagonal Logo -->
+                <div class="umbrella-logo-icon" title="Umbrella Corporation Security Service"></div>
+                <span class="glitch-logo">SHAFEIN RAHMAN // UMBRELLA.</span>
+                <span class="status-badge">
+                    <span class="status-dot"></span>
+                    VITAL STATUS: FINE [72 BPM]
+                </span>
+            </div>
+
+            <!-- Top Header Navigation (Cleaned per user directive) -->
+            <nav class="cyber-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#bio" class="active">01 // Dossier (Bio)</a></li>
+                    <!-- Internal link to the separate Education & Tech Skills page -->
+                    <li><a href="qualifications.html" title="Separate Page: Education & Skills">02 // Qualifications &amp; Skills ↗</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =======================================================================
+         MAIN CONTENT OVERLAY (LARGE CLASSIFIED TACTICAL PANELS ON DARK BACKDROP)
+         ======================================================================= -->
+    <main class="main-wrapper">
+
+        <!-- ===================================================================
+             SECTION 1: BIO & OPERATIVE DOSSIER (LANDING PAGE STARTS HERE)
+             Contains: Local photo with separate scanlines overlay, short paragraph,
+             categorized hobbies right inside the main page, anchor links to favorites,
+             and internal link to separate qualifications page.
+             =================================================================== -->
+        <section id="bio" class="cyber-panel" data-id="DOSSIER_01">
+            <header class="panel-header">
+                <span class="panel-tag">[ CLASSIFIED DOSSIER // UMBRELLA SPECIAL TACTICS ]</span>
+                <h1 class="panel-title">01. Operative Profile &amp; Bio</h1>
+            </header>
+
+            <div class="bio-hero-layout">
+                <!-- Local Image with DECOUPLED SCANLINES EFFECT (Easy to swap picture anytime) -->
+                <div class="profile-frame">
+                    <div class="profile-img-container">
+                        <!-- To change your picture later: just replace 'images/profile.jpg' with your desired image path -->
+                        <img src="images/profile.jpg" alt="Resident Evil Tactical Portrait of Shafein Rahman" class="profile-photo">
+                        <!-- Pure CSS Scanlines Overlay -->
+                        <div class="profile-scanlines" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <div class="bio-content">
+                    <h2><span class="re-highlight-white">SHAFEIN RAHMAN</span></h2>
+                    <p class="bio-subtitle">Tactical Systems Architect // Bio-Computational Security Specialist</p>
+
+                    <!-- Text formatting requirement: bold, italics, color variations, embedded hyperlink -->
+                    <p class="bio-text">
+                        Welcome to the secure research terminal. I am a specialized systems engineer and UMBRELLA operative focused on
+                        fault-tolerant computational architectures, viral protocol analysis, secure web applications and keeping Raccoon city safe. Currently, I am
+                        advancing my undergraduate studies at
+                        <!-- Hyperlink requirement: Embedded within a sentence -->
+                        <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer"
+                            class="re-highlight-crimson" style="text-decoration: underline;">BRAC University</a>,
+                        where I analyze foundational algorithms alongside advanced network defense frameworks.
+                    </p>
+
+                    <!-- Minor inline style demonstration (Part 3 Requirement: inline styles sparingly for minor elements) -->
+                    <div class="system-ticker" style="border-left-color: #ffffff;">
+                        <span class="hud-bracket">[VIRAL_SCAN]</span> Biosensor clearance: <strong style="color: #00e676;">POSITIVE</strong>.
+                        Containment Grid: <span class="re-highlight-crimson">ASG 12L</span>. Pulse: <span style="color: #ffffff; font-weight: bold;">STABLE</span>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies & Categorized Links (Integrated directly into main index page) -->
+            <div id="hobbies" class="hobbies-subcontainer">
+                <h3><span class="hud-bracket">&gt;</span> Categorized Directives &amp; Field Hobbies</h3>
+                <p class="bio-text" style="font-size: 1rem; margin-bottom: 1.2rem;">
+                    Archived activities, tactical training, and personal networks maintained between high-priority research operations:
+                </p>
+
+                <div class="categories-grid">
+
+                    <!-- Category A: Survival Horror & Tactical Sims -->
+                    <div class="category-card">
+                        <h4>🎮 Survival Horror &amp; Sims</h4>
+                        <p class="bio-text" style="font-size: 0.92rem; margin-bottom: 0.6rem;">
+                            Analyzing tension pacing, resource scarcity management, and environmental storytelling in survival horror classics.
+                        </p>
+                        <ul>
+                            <li><a href="https://www.residentevil.com/" target="_blank" rel="noopener noreferrer">Resident Evil Official (Capcom)</a></li>
+                            <li><a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Steam Survival Horror Catalog</a></li>
+                            <li><a href="https://www.gog.com/" target="_blank" rel="noopener noreferrer">GOG Classic Retro Archive</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Category B: Neural Tech & Cryptographic Defense -->
+                    <div class="category-card">
+                        <h4>💻 Neural Tech &amp; Defense</h4>
+                        <p class="bio-text" style="font-size: 0.92rem; margin-bottom: 0.6rem;">
+                            Constructing hardened data pipelines and participating in university computing societies.
+                        </p>
+                        <ul>
+                            <!-- Hyperlink requirement: Link to CSE 391 Discord page -->
+                            <li><a href="https://discord.gg/DrbyuXnzH" target="_blank" rel="noopener noreferrer">CSE 391 Discord Community</a></li>
+                            <li><a href="https://github.com/shafeinrahman" target="_blank" rel="noopener noreferrer">GitHub Security Repositories</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Category C: Dark Ambient & Audio -->
+                    <div class="category-card">
+                        <h4>🎧 Dark Ambient &amp; Audio</h4>
+                        <p class="bio-text" style="font-size: 0.92rem; margin-bottom: 0.6rem;">
+                            Composing atmospheric save-room synthesizer arrangements and industrial horror soundscapes.
+                        </p>
+                        <ul>
+                            <li><a href="https://www.youtube.com/watch?v=9F-AaJr6YuA&list=PLHRsopJvRecxhts_qqQKdUPsSWDEbPaWk" target="_blank" rel="noopener noreferrer">RE2 Remake OST</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=CQYCLa1M3Gc&list=PLFJb38m95zEMIw_NbrBfn1hbQFw3vDEYJ" target="_blank" rel="noopener noreferrer">Silent Hill 2 Soundtrack</a></li>
+                            <li><a href="https://www.youtube.com/@MirchiBangla" target="_blank" rel="noopener noreferrer">Sunday Suspense, a personal favourite</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Category D: Tactical Athletics & Speed Chess -->
+                    <div class="category-card">
+                        <h4>⚡ Tactical Field Athletics</h4>
+                        <p class="bio-text" style="font-size: 0.92rem; margin-bottom: 0.6rem;">
+                            High-intensity cycle runs and competitive Rainbow 6 matches.
+                        </p>
+                        <ul>
+                            <li><a href="https://www.ubisoft.com/game/rainbow-six/siege" target="_blank" rel="noopener noreferrer">Rainbow Six Siege Tactical Ops</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom of Bio Landing Page: Anchor Links & Internal Links (User Requirement) -->
+            <div class="bio-action-links">
+                <span class="bio-action-title">Field Directives:</span>
+                <div class="action-btn-group">
+                    <!-- Anchor Link to Favorite List at bottom of bio landing page -->
+                    <a href="#favorites" class="cyber-btn cyber-btn-white">⚡ Jump to Top 10 Games</a>
+                    <!-- Internal Link to the separate Education & Tech Skills page -->
+                    <a href="qualifications.html" class="cyber-btn cyber-btn-red">🎓 Qualifications &amp; Skills Record ↗</a>
+                    <!-- Anchor link to Contact -->
+                    <a href="#contact" class="cyber-btn cyber-btn-white">💬 Transmit Incident Report</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SECTION 2: TOP 10 FAVORITE GAMES LIST (ANCHOR TARGET #favorites)
+             Contains: Top 10 list, online image banner (Requirement: web-linked image)
+             =================================================================== -->
+        <section id="favorites" class="cyber-panel" data-id="GAMES_10">
+            <header class="panel-header">
+                <span class="panel-tag">[ ARCHIVE // VIDEO GAMES ]</span>
+                <h2 class="panel-title">02. Top 10 Favourite Games</h2>
+            </header>
+
+            <p class="bio-text">
+                An index of atmospheric survival horror benchmarks, tactical masterworks, and interactive simulations that I highly regard:
+            </p>
+
+            <div class="top10-container">
+                <div class="game-item">
+                    <span class="game-rank">01</span>
+                    <div class="game-info">
+                        <h3>Resident Evil 2</h3>
+                        <p class="game-genre">Capcom // Survival Horror</p>
+                        <p class="game-desc">The remake of the original 1998 survival horror masterpiece featuring a rookie Leon S. Kennedy, Claire Redfield and the relentless pursuit of Mr. X inside the R.P.D.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">02</span>
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <p class="game-genre">CD Projekt Red // Open-World RPG</p>
+                        <p class="game-desc">The ultimate dystopian experience exploring transhumanism, freedom, and the haunting reality of what it means to be human in a world obsessed with technology and corporate power.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">03</span>
+                    <div class="game-info">
+                        <h3>The Witcher 3: Wild Hunt</h3>
+                        <p class="game-genre">CD Projekt Red // Open-World RPG</p>
+                        <p class="game-desc">A masterclass in branch narrative writing, grim atmosphere, and unmatched character characterization.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">04</span>
+                    <div class="game-info">
+                        <h3>Metal Gear Solid 2: Sons of Liberty</h3>
+                        <p class="game-genre">Konami // Stealth Action</p>
+                        <p class="game-desc">A profound meditation on memes, information control, and the existential trappings of digital existence.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">05</span>
+                    <div class="game-info">
+                        <h3>ACE Combat 7: Skies Unknown</h3>
+                        <p class="game-genre">Project Aces // Ace Combat</p>
+                        <p class="game-desc">Unrivaled dogfighting mechanics and jaw-dropping architectural grandeur across the skies of Strangereal.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">06</span>
+                    <div class="game-info">
+                        <h3>Age of Empires 2: Definitive Edition</h3>
+                        <p class="game-genre">World's Edge // RTS</p>
+                        <p class="game-desc">Unmatched experience in real-time strategy, resource management, gripping historical retellings, and tactical dominance across diverse historical civilizations.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">07</span>
+                    <div class="game-info">
+                        <h3>Mass Effect 2</h3>
+                        <p class="game-genre">BioWare // Sci-Fi RPG</p>
+                        <p class="game-desc">Peak cinematic sci-fi storytelling culminating in the legendary suicide mission past the Omega-4 relay.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">08</span>
+                    <div class="game-info">
+                        <h3>Devil May Cry 5</h3>
+                        <p class="game-genre">Capcom // Hack and Slash</p>
+                        <p class="game-desc">Stylish action masterpiece dissecting family, trauma, and redemption through high-octane combat.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">09</span>
+                    <div class="game-info">
+                        <h3>Resident Evil 9</h3>
+                        <p class="game-genre">Capcom // Survival Horror</p>
+                        <p class="game-desc">Atmospheric horror masterpiece combining claustrophobic environments, Leon's legendary return to Raccoon City, and Grace Ashcroft's chilling debut.</p>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <span class="game-rank">10</span>
+                    <div class="game-info">
+                        <h3>Metal Gear Solid V</h3>
+                        <p class="game-genre">Konami // Open World Stealth Action</p>
+                        <p class="game-desc">Kojima's unfinished masterpiece and the last chapter of Big Boss's saga set in the height of the Cold War, exploring deception, revenge, and the cost of loyalty.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web-linked image requirement (Part 3: at least two images, other linked from web) -->
+            <div class="showcase-banner">
+                <img src="https://static.wikia.nocookie.net/residentevil/images/d/d8/Mansion_front.jpg/revision/latest?cb=20060815211443?auto=format&fit=crop&w=1200&q=80"
+                    alt="Raccoon City Industrial Gothic Laboratory Surveillance">
+                <div class="showcase-caption">
+                    [SOURCE: EXTERNAL_NET] Surveillance Feed 04: The Spencer mansion at Arklay Mountains. Connected via secure Umbrella fiber relay.
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SECTION 3: CONTACT & COMMUNICATION (BONUS FORM INCLUDED)
+             =================================================================== -->
+        <section id="contact" class="cyber-panel" data-id="COMMS_03">
+            <header class="panel-header">
+                <span class="panel-tag">[ COMMS // UMBRELLA DISPATCH ]</span>
+                <h2 class="panel-title">03. Comms &amp; Incident Dispatch</h2>
+            </header>
+
+            <div class="contact-layout">
+                <div class="contact-info-box">
+                    <p class="bio-text">
+                        Need to transmit an urgent incident dossier, coordinate tactical operations, or collaborate on secure computational systems? Contact my field terminal:
+                    </p>
+
+                    <div class="contact-channel">
+                        <span class="channel-icon">✉️</span>
+                        <div>
+                            <div class="channel-label">Encrypted Dispatch Mail</div>
+                            <div class="channel-val">
+                                <a href="mailto:md.shafein.rahman@g.bracu.ac.bd">md.shafein.rahman@g.bracu.ac.bd</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel">
+                        <span class="channel-icon">💬</span>
+                        <div>
+                            <div class="channel-label">Tactical Radio (CSE 391 Discord)</div>
+                            <div class="channel-val">
+                                <a href="https://discord.gg/DrbyuXnzH" target="_blank" rel="noopener noreferrer">
+                                    Join Discord Server Frequency</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel">
+                        <span class="channel-icon">🐙</span>
+                        <div>
+                            <div class="channel-label">GitHub</div>
+                            <div class="channel-val">
+                                <a href="https://github.com/shafeinrahman" target="_blank"
+                                    rel="noopener noreferrer">github.com/shafeinrahman</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel">
+                        <span class="channel-icon">📍</span>
+                        <div>
+                            <div class="channel-label">Station Coordinates</div>
+                            <div class="channel-val"><a href="https://maps.app.goo.gl/usCNFi8jgqQhFFow7" target="_blank"
+                                    rel="noopener noreferrer">BRAC University Main Campus, Merul Badda, Dhaka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bonus Challenge 1: Functional Contact Form that triggers email -->
+                <form class="cyber-form" action="mailto:md.shafein.rahman@g.bracu.ac.bd" method="post"
+                    enctype="text/plain">
+                    <div class="form-group">
+                        <label for="sender-name">Reporting Operative / Handle</label>
+                        <input type="text" id="sender-name" name="name" class="cyber-input"
+                            placeholder="e.g. Chris Redfield / Jill Valentine" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sender-email">Return Frequency / Secure Email</label>
+                        <input type="email" id="sender-email" name="email" class="cyber-input"
+                            placeholder="e.g. jill.valentine@rpd.gov" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-content">Incident Report / Transmission Payload</label>
+                        <textarea id="message-content" name="message" class="cyber-input" rows="4"
+                            placeholder="Transmit details of your tactical inquiry or project..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="cyber-btn cyber-btn-white"
+                        style="padding: 0.8rem; font-size: 0.95rem; justify-content: center;">
+                        ⚡ TRANSMIT INCIDENT DOSSIER
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =======================================================================
+         FOOTER: SOLID RED (USER REQUIREMENT)
+         Contains:
+         1. Solid red background
+         2. Favorite quote
+         3. Copyright info
+         4. Dynamic JavaScript output: page location and last modification date
+         ======================================================================= -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+
+            <!-- Favorite Quote Requirement (Umbrella Corporation & Resident Evil) -->
+            <div class="footer-quote-box">
+                <blockquote class="footer-quote">
+                    &ldquo;Our business is life itself.&rdquo;
+                </blockquote>
+                <cite class="footer-quote-author">&mdash; Umbrella Corporation Pharmaceuticals // Resident Evil</cite>
+            </div>
+
+            <!-- Footer Navigation & Internal Links -->
+            <div class="footer-nav-links">
+                <a href="#bio">Back to Top (Dossier)</a>
+                <a href="#hobbies">Directives &amp; Hobbies</a>
+                <a href="#favorites">Top 10 Games</a>
+                <a href="qualifications.html">Qualifications &amp; Skills Record</a>
+                <a href="#contact">Incident Dispatch</a>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <!-- Dynamic JavaScript Info: Location & Last Modified Date -->
+            <div class="footer-meta-info">
+                <div>
+                    <strong>TERMINAL LOCATION:</strong>
+                    <span id="page-location-display" class="js-meta-badge">Detecting URI...</span>
+                </div>
+                <div>
+                    <strong>LAST BIO-SYNC (MODIFICATION DATE):</strong>
+                    <span id="last-modified-display" class="js-meta-badge">Loading Timestamp...</span>
+                </div>
+            </div>
+
+            <!-- Copyright Requirement -->
+            <div class="footer-copyright">
+                &copy; 2026 Shafein Rahman. Built strictly with semantic HTML5 &amp; CSS3.
+            </div>
+        </div>
+    </footer>
+
+    <!-- =======================================================================
+         JAVASCRIPT: DISPLAY PAGE LOCATION & LAST MODIFICATION DATE (PART 3)
+         ======================================================================= -->
+    <script>
+        // Display the page's location and last modification date at the bottom
+        (function () {
+            var locationEl = document.getElementById('page-location-display');
+            var modifiedEl = document.getElementById('last-modified-display');
+
+            if (locationEl) {
+                // Displays the active URL / file path
+                locationEl.textContent = window.location.href || document.location.pathname;
+            }
+
+            if (modifiedEl) {
+                // Displays the document's last modification date
+                modifiedEl.textContent = document.lastModified;
+            }
+        })();
+    </script>
+</body>
+
+</html>
